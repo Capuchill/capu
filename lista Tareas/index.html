@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contenedorTarea{
+            display:flex ;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>To-Do list</h1>
+    <input type="text" id="tarea">
+    <button id="agregar">agregar</button>
+    <button id="eliminar">eliminar</button>
+    <div id="container">
+
+    </div>
+
+    <script>
+        const tarea = document.getElementById("tarea");
+        const btnAgregar = document.getElementById("agregar");
+        const btnBorrar = document.getElementById("eliminar");
+
+        let listaTareas = [];
+        btnAgregar.addEventListener("click",agregarTarea);
+        btnBorrar.addEventListener("click",borrarTarea);
+
+        function agregarTarea(){
+            
+            const contenidoTarea = tarea.value;
+            const contenedor = document.getElementById("container");
+            const div = document.createElement("div");
+            div.classList.add("contenedorTarea")
+            const tareita = document.createElement("p");
+
+            const input = document.createElement("input");
+            input.type = "checkbox";
+            tareita.textContent = contenidoTarea;
+            div.appendChild(input)
+            div.appendChild(tareita)
+            contenedor.appendChild(div)
+
+        }
+
+        function borrarTarea(){
+
+        }
+
+
+    </script>
+</body>
+</html>

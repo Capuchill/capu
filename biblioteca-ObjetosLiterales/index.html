@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libritos</title>
+    <style>
+        .registro{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;   
+        }
+
+        .registro input{
+            width: 20vw;
+
+        }
+
+        .registro select{
+            width: 20vw;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="registro">
+        <label for="">Titulo</label>
+        <input type="text" id="titulo">
+        <label for="">Autor</label>
+        <input type="text" id="autor">
+        <label for="">Año de publicacion</label>
+        <input type="text" id="año">
+        <label for="">Disponible</label>
+        <select name="" id="disponible">
+            <option value="true">Si</option>
+            <option value="false">No</option>
+        </select>
+        <label for="">Prestado a</label>
+        <input type="text" id="prestado">
+        <button id="registrar">Registrar</button>
+    </div>
+
+    <script>
+        const titulo = document.getElementById("titulo");
+        const autor = document.getElementById("autor");
+        const año = document.getElementById("año");
+        const disp = document.getElementById("disponible");
+        const prest = document.getElementById("prestado");
+        const btnRegistrar = document.getElementById("registrar");
+        btnRegistrar.addEventListener("click",registrarLibro);
+
+        let listaLibros = [];
+
+        function registrarLibro(){
+            
+            const valorTitulo = titulo.value
+            const valorAutor = autor.value
+            const valorAño= año.value
+            const valorDisp = disp.value
+            const valorPrest = prest.value
+
+
+            
+
+
+
+
+
+        }
+    </script>
+</body>
+</html>
